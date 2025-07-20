@@ -1,0 +1,49 @@
+<%- layout("layouts/boilerplate") %>
+
+<div class="row">
+  <div class="col-8 offset-2">
+    <h3 class="mt-3">Create New Listing</h3>
+
+    <form id="listingForm" class="needs-validation" method="POST" enctype="multipart/form-data" action="/listings">
+      
+      <!-- Title -->
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input required type="text" id="title" class="form-control" name="listing[title]" placeholder="Enter title">
+      </div>
+
+      <!-- Description -->
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea required id="description" class="form-control" name="listing[description]" placeholder="Enter description"></textarea>
+      </div>
+
+      <!-- Image -->
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input type="file" id="image" class="form-control" name="listing[image]">
+      </div>
+
+      <!-- Price -->
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input required type="number" id="price" class="form-control" name="listing[price]" placeholder="Enter price">
+      </div>
+
+      <!-- Country -->
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input required type="text" id="country" class="form-control" name="listing[country]" placeholder="Enter country">
+      </div>
+
+      <!-- Location -->
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input required type="text" id="location" class="form-control" name="listing[location]" placeholder="Enter location">
+      </div>
+
+      <button type="submit" class="btn btn-dark mt-3">Create Listing</button>
+    </form>
+  </div>
+</div>
+

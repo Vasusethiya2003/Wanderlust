@@ -6,7 +6,6 @@ const {isLoggedIn, isOwner,validateListing}=require("../middleware.js")
 // Models & Schemas
 const Listing = require("../models/listing.js");
 const listingController = require("../controllers/listings.js");
-const { route } = require("./listing.js");
 const multer=require("multer");
 const {storage}=require("../cloudConfig.js")
 const upload=multer({storage});
@@ -15,7 +14,7 @@ const upload=multer({storage});
 // ROUTES
 //
 router
-    .route("/listings")
+    .route("/")
     .get(wrapAsync(listingController.index))
     .post( isLoggedIn,upload.single("listing[image]"),validateListing,wrapAsync(listingController.createListing));
 
@@ -30,3 +29,4 @@ router
 // GET edit listing form
 router.get("/:id/edit", isLoggedIn , isOwner ,wrapAsync(listingController.editListing));
 module.exports = router;
+

@@ -1,214 +1,544 @@
 const sampleListings =[
   {
-    "title": "Cozy Beachfront Cottage",
-    "description": "Enjoy the scenic beauty with a relaxing stay.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Cozy Cabin in the Woods",
+    description: "A peaceful retreat surrounded by nature.",
+    image: {
+      url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      filename: "cozycabinwoods"
     },
-    "price": 1500,
-    "location": "Malibu",
-    "country": "United States"
+    price: 120,
+    location: "Asheville, NC",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-82.5515, 35.5951]
+    }
   },
   {
-    "title": "Luxury City Hotel",
-    "description": "Perfect location for your dream vacation.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Beachside Bungalow",
+    description: "Walk to the beach and enjoy ocean views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      filename: "beachbungalow"
     },
-    "price": 3200,
-    "location": "Paris",
-    "country": "France"
+    price: 200,
+    location: "Maui, Hawaii",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-156.3319, 20.7984]
+    }
   },
   {
-    "title": "Alpine Mountain Retreat",
-    "description": "Escape to nature with this cozy mountain lodge.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60"
+    title: "Luxury Villa with Pool",
+    description: "Modern design and a private pool.",
+    image: {
+      url: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+      filename: "luxuryvillapool"
     },
-    "price": 1800,
-    "location": "Interlaken",
-    "country": "Switzerland"
+    price: 350,
+    location: "Bali",
+    country: "Indonesia",
+    geometry: {
+      type: "Point",
+      coordinates: [115.1889, -8.4095]
+    }
   },
   {
-    "title": "Desert Oasis Resort",
-    "description": "Experience the luxury in the heart of the desert.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Mountain View Chalet",
+    description: "Stunning views of the Alps.",
+    image: {
+      url: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c",
+      filename: "mountainchalet"
     },
-    "price": 2100,
-    "location": "Dubai",
-    "country": "UAE"
+    price: 180,
+    location: "Zermatt",
+    country: "Switzerland",
+    geometry: {
+      type: "Point",
+      coordinates: [7.7491, 46.0207]
+    }
   },
   {
-    "title": "Tokyo Highrise Hotel",
-    "description": "Modern comforts in the heart of Tokyo.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Rooftop Loft in the City",
+    description: "Chic modern space in the heart of downtown.",
+    image: {
+      url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      filename: "cityloft"
     },
-    "price": 2700,
-    "location": "Tokyo",
-    "country": "Japan"
+    price: 220,
+    location: "New York, NY",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-74.0060, 40.7128]
+    }
   },
   {
-    "title": "Rustic Lakeside Cabin",
-    "description": "Perfect for fishing and nature lovers.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60"
+    title: "Desert Dome Getaway",
+    description: "Off-grid dome house with desert views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "desertdome"
     },
-    "price": 1200,
-    "location": "Lake Tahoe",
-    "country": "United States"
+    price: 140,
+    location: "Joshua Tree, CA",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-116.3131, 34.1347]
+    }
   },
   {
-    "title": "Greek Island Villa",
-    "description": "Stay near the sea in a white-washed villa.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/2716243/pexels-photo-2716243.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Rustic Lakehouse Escape",
+    description: "A tranquil lakehouse with a fireplace and canoe.",
+    image: {
+      url: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+      filename: "rusticlakehouse"
     },
-    "price": 2000,
-    "location": "Santorini",
-    "country": "Greece"
+    price: 150,
+    location: "Lake Tahoe, CA",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-120.0441, 39.0968]
+    }
   },
   {
-    "title": "Scandinavian Cabin",
-    "description": "Enjoy northern lights in comfort and style.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60"
+    title: "Historic Stone Cottage",
+    description: "Charming old-world cottage in the countryside.",
+    image: {
+      url: "https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "stonecottage"
     },
-    "price": 1900,
-    "location": "Tromsø",
-    "country": "Norway"
+    price: 110,
+    location: "Cotswolds",
+    country: "UK",
+    geometry: {
+      type: "Point",
+      coordinates: [-1.7767, 51.8330]
+    }
   },
   {
-    "title": "Rainforest Eco Lodge",
-    "description": "Sustainable stay surrounded by jungle.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/417174/pexels-photo-417174.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Modern Glass Treehouse",
+    description: "Stay among the treetops with full-glass views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "glasstreehouse"
     },
-    "price": 1600,
-    "location": "Costa Rica",
-    "country": "Costa Rica"
+    price: 280,
+    location: "Portland, OR",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-122.6765, 45.5231]
+    }
   },
   {
-    "title": "NYC Central Apartment",
-    "description": "Live the big city life near Times Square.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=60"
+    title: "Colorful Mexican Hacienda",
+    description: "Authentic experience in a traditional Mexican home.",
+    image: {
+      url: "https://images.unsplash.com/photo-1455587734955-081b22074882?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "mexicanhacienda"
     },
-    "price": 3000,
-    "location": "New York",
-    "country": "United States"
+    price: 130,
+    location: "San Miguel de Allende",
+    country: "Mexico",
+    geometry: {
+      type: "Point",
+      coordinates: [-100.7417, 20.9144]
+    }
   },
   {
-    "title": "Coastal Surf Shack",
-    "description": "Chill by the waves with this rustic surf shack.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Arctic Glass Igloo",
+    description: "Watch the northern lights in comfort.",
+    image: {
+      url: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "arcticigloo"
     },
-    "price": 1400,
-    "location": "Goa",
-    "country": "India"
+    price: 400,
+    location: "Rovaniemi",
+    country: "Finland",
+    geometry: {
+      type: "Point",
+      coordinates: [25.7294, 66.5039]
+    }
   },
   {
-    "title": "Modern Downtown Loft",
-    "description": "Stylish loft in the heart of the city.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=60"
+    title: "Tropical Jungle Retreat",
+    description: "Eco-lodge deep in the rainforest.",
+    image: {
+      url: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "jungleretreat"
     },
-    "price": 2200,
-    "location": "London",
-    "country": "United Kingdom"
+    price: 170,
+    location: "Uvita",
+    country: "Costa Rica",
+    geometry: {
+      type: "Point",
+      coordinates: [-83.7312, 9.2094]
+    }
+  },
+   {
+    title: "Cozy Cabin in the Woods",
+    description: "A peaceful retreat surrounded by nature.",
+    image: {
+      url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      filename: "cozycabinwoods"
+    },
+    price: 120,
+    location: "Asheville, NC",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-82.5515, 35.5951]
+    }
   },
   {
-    "title": "Historic Castle Suite",
-    "description": "Live like royalty in this ancient castle.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Beachside Bungalow",
+    description: "Walk to the beach and enjoy ocean views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      filename: "beachbungalow"
     },
-    "price": 4000,
-    "location": "Edinburgh",
-    "country": "United Kingdom"
+    price: 200,
+    location: "Maui, Hawaii",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-156.3319, 20.7984]
+    }
   },
   {
-    "title": "Tropical Treehouse",
-    "description": "Relax in a treehouse surrounded by palms.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Luxury Villa with Pool",
+    description: "Modern design and a private pool.",
+    image: {
+      url: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+      filename: "luxuryvillapool"
     },
-    "price": 2500,
-    "location": "Bali",
-    "country": "Indonesia"
+    price: 350,
+    location: "Bali",
+    country: "Indonesia",
+    geometry: {
+      type: "Point",
+      coordinates: [115.1889, -8.4095]
+    }
   },
   {
-    "title": "Snowy Chalet Retreat",
-    "description": "Cozy up in a snowy mountain chalet.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=60"
+    title: "Mountain View Chalet",
+    description: "Stunning views of the Alps.",
+    image: {
+      url: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c",
+      filename: "mountainchalet"
     },
-    "price": 2300,
-    "location": "Aspen",
-    "country": "United States"
+    price: 180,
+    location: "Zermatt",
+    country: "Switzerland",
+    geometry: {
+      type: "Point",
+      coordinates: [7.7491, 46.0207]
+    }
   },
   {
-    "title": "Rooftop Urban Studio",
-    "description": "Enjoy city views from this modern studio.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=60"
+    title: "Rooftop Loft in the City",
+    description: "Chic modern space in the heart of downtown.",
+    image: {
+      url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      filename: "cityloft"
     },
-    "price": 1800,
-    "location": "Tokyo",
-    "country": "Japan"
+    price: 220,
+    location: "New York, NY",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-74.0060, 40.7128]
+    }
   },
   {
-    "title": "Countryside Vineyard Villa",
-    "description": "Wine country luxury in a private villa.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/2765871/pexels-photo-2765871.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Desert Dome Getaway",
+    description: "Off-grid dome house with desert views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "desertdome"
     },
-    "price": 2800,
-    "location": "Tuscany",
-    "country": "Italy"
+    price: 140,
+    location: "Joshua Tree, CA",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-116.3131, 34.1347]
+    }
   },
   {
-    "title": "Urban Minimalist Apartment",
-    "description": "Sleek and simple city living.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&h=600"
+    title: "Rustic Lakehouse Escape",
+    description: "A tranquil lakehouse with a fireplace and canoe.",
+    image: {
+      url: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+      filename: "rusticlakehouse"
     },
-    "price": 2000,
-    "location": "Berlin",
-    "country": "Germany"
+    price: 150,
+    location: "Lake Tahoe, CA",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-120.0441, 39.0968]
+    }
   },
   {
-    "title": "Beachfront Infinity Pool Villa",
-    "description": "Private infinity pool facing the ocean.",
-    "image": {
-      "filename": "listingimage",
-      "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60"
+    title: "Historic Stone Cottage",
+    description: "Charming old-world cottage in the countryside.",
+    image: {
+      url: "https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "stonecottage"
     },
-    "price": 4500,
-    "location": "Phuket",
-    "country": "Thailand"
+    price: 110,
+    location: "Cotswolds",
+    country: "UK",
+    geometry: {
+      type: "Point",
+      coordinates: [-1.7767, 51.8330]
+    }
+  },
+  {
+    title: "Modern Glass Treehouse",
+    description: "Stay among the treetops with full-glass views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "glasstreehouse"
+    },
+    price: 280,
+    location: "Portland, OR",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-122.6765, 45.5231]
+    }
+  },
+  {
+    title: "Colorful Mexican Hacienda",
+    description: "Authentic experience in a traditional Mexican home.",
+    image: {
+      url: "https://images.unsplash.com/photo-1455587734955-081b22074882?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "mexicanhacienda"
+    },
+    price: 130,
+    location: "San Miguel de Allende",
+    country: "Mexico",
+    geometry: {
+      type: "Point",
+      coordinates: [-100.7417, 20.9144]
+    }
+  },
+  {
+    title: "Arctic Glass Igloo",
+    description: "Watch the northern lights in comfort.",
+    image: {
+      url: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "arcticigloo"
+    },
+    price: 400,
+    location: "Rovaniemi",
+    country: "Finland",
+    geometry: {
+      type: "Point",
+      coordinates: [25.7294, 66.5039]
+    }
+  },
+  {
+    title: "Tropical Jungle Retreat",
+    description: "Eco-lodge deep in the rainforest.",
+    image: {
+      url: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "jungleretreat"
+    },
+    price: 170,
+    location: "Uvita",
+    country: "Costa Rica",
+    geometry: {
+      type: "Point",
+      coordinates: [-83.7312, 9.2094]
+    }
+  }, {
+    title: "Cozy Cabin in the Woods",
+    description: "A peaceful retreat surrounded by nature.",
+    image: {
+      url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      filename: "cozycabinwoods"
+    },
+    price: 120,
+    location: "Asheville, NC",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-82.5515, 35.5951]
+    }
+  },
+  {
+    title: "Beachside Bungalow",
+    description: "Walk to the beach and enjoy ocean views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      filename: "beachbungalow"
+    },
+    price: 200,
+    location: "Maui, Hawaii",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-156.3319, 20.7984]
+    }
+  },
+  {
+    title: "Luxury Villa with Pool",
+    description: "Modern design and a private pool.",
+    image: {
+      url: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+      filename: "luxuryvillapool"
+    },
+    price: 350,
+    location: "Bali",
+    country: "Indonesia",
+    geometry: {
+      type: "Point",
+      coordinates: [115.1889, -8.4095]
+    }
+  },
+  {
+    title: "Mountain View Chalet",
+    description: "Stunning views of the Alps.",
+    image: {
+      url: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c",
+      filename: "mountainchalet"
+    },
+    price: 180,
+    location: "Zermatt",
+    country: "Switzerland",
+    geometry: {
+      type: "Point",
+      coordinates: [7.7491, 46.0207]
+    }
+  },
+  {
+    title: "Rooftop Loft in the City",
+    description: "Chic modern space in the heart of downtown.",
+    image: {
+      url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      filename: "cityloft"
+    },
+    price: 220,
+    location: "New York, NY",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-74.0060, 40.7128]
+    }
+  },
+  {
+    title: "Desert Dome Getaway",
+    description: "Off-grid dome house with desert views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "desertdome"
+    },
+    price: 140,
+    location: "Joshua Tree, CA",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-116.3131, 34.1347]
+    }
+  },
+  {
+    title: "Rustic Lakehouse Escape",
+    description: "A tranquil lakehouse with a fireplace and canoe.",
+    image: {
+      url: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+      filename: "rusticlakehouse"
+    },
+    price: 150,
+    location: "Lake Tahoe, CA",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-120.0441, 39.0968]
+    }
+  },
+  {
+    title: "Historic Stone Cottage",
+    description: "Charming old-world cottage in the countryside.",
+    image: {
+      url: "https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "stonecottage"
+    },
+    price: 110,
+    location: "Cotswolds",
+    country: "UK",
+    geometry: {
+      type: "Point",
+      coordinates: [-1.7767, 51.8330]
+    }
+  },
+  {
+    title: "Modern Glass Treehouse",
+    description: "Stay among the treetops with full-glass views.",
+    image: {
+      url: "https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "glasstreehouse"
+    },
+    price: 280,
+    location: "Portland, OR",
+    country: "USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-122.6765, 45.5231]
+    }
+  },
+  {
+    title: "Colorful Mexican Hacienda",
+    description: "Authentic experience in a traditional Mexican home.",
+    image: {
+      url: "https://images.unsplash.com/photo-1455587734955-081b22074882?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "mexicanhacienda"
+    },
+    price: 130,
+    location: "San Miguel de Allende",
+    country: "Mexico",
+    geometry: {
+      type: "Point",
+      coordinates: [-100.7417, 20.9144]
+    }
+  },
+  {
+    title: "Arctic Glass Igloo",
+    description: "Watch the northern lights in comfort.",
+    image: {
+      url: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "arcticigloo"
+    },
+    price: 400,
+    location: "Rovaniemi",
+    country: "Finland",
+    geometry: {
+      type: "Point",
+      coordinates: [25.7294, 66.5039]
+    }
+  },
+  {
+    title: "Tropical Jungle Retreat",
+    description: "Eco-lodge deep in the rainforest.",
+    image: {
+      url: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      filename: "jungleretreat"
+    },
+    price: 170,
+    location: "Uvita",
+    country: "Costa Rica",
+    geometry: {
+      type: "Point",
+      coordinates: [-83.7312, 9.2094]
+    }
   }
-  // … total 50 in file
-]
+];
+
 
 module.exports = { data: sampleListings };

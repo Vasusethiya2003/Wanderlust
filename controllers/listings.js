@@ -69,8 +69,6 @@ module.exports.createListing = async (req, res) => {
     }
 };
 
-
-
 module.exports.updateLsiting = async (req, res) => {
     const { id } = req.params;
     let listing = await Listing.findByIdAndUpdate(id, { ...req.body.listing });

@@ -24,7 +24,14 @@ router.get("/new", isLoggedIn,listingController.renderNewForm);
 router
     .route("/:id")
     .get(wrapAsync(listingController.showListing))
-    .put( validateListing ,isOwner, upload.single("listing[image]"),isLoggedIn,wrapAsync(listingController.updateLsiting))
+   .put(
+  isLoggedIn,
+  isOwner,
+  upload.single("listing[image]"), // ✅ Multer FIRST
+  validateListing,
+  wrapAsync(listingController.updateLsiting) // ✅ fixed typo here
+)
+
     .delete( isLoggedIn ,isOwner,wrapAsync(listingController.deleteListing));
 // GET edit listing form
 router.get("/:id/edit", isLoggedIn , isOwner ,wrapAsync(listingController.editListing));

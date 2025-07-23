@@ -56,6 +56,9 @@
     font-size: 0.8rem;
     white-space: nowrap;
 }
+.tax-info {
+  display: none;
+}
 </style>
 <div class="filters-container">
     <div id="filters">
@@ -91,7 +94,7 @@
                             <b>
                                 <%=listing.title%> <br />
                             </b>
-                           <p> $ <%= listing.price ? listing.price.toLocaleString("en-IN") : "Price not available" %> / night
+                           <p> &#x20B9 <%= listing.price ? listing.price.toLocaleString("en-IN") : "Price not available" %> / night
                                  <i class="tax-info"> &nbsp; +18% taxes </i></p>
                                 <br>
                         </p>
@@ -100,16 +103,13 @@
             </a>
             <%}%>
     </div>
-    <script>
-        let taxSwitch=document.getElementById("switchCheckDefault");
-        taxSwitch.addEventListener("click",()=>{
-            let taxinfo=document.getElementsByClassName("tax-info");
-            for(info of taxinfo){
-                if(info.style.display !="inline"){
-                     info.style.display="inline";
-                }else{
-                    info.style.display="none";
-                }
-            }
-        })
-    </script>
+<script>
+    let taxSwitch = document.getElementById("switchCheckDefault");
+    let taxInfoElements = document.getElementsByClassName("tax-info");
+
+    taxSwitch.addEventListener("change", () => {
+        for (let info of taxInfoElements) {
+            info.style.display = taxSwitch.checked ? "inline" : "none";
+        }
+    });
+</script>
